@@ -9,4 +9,4 @@
 * https://localhost:8445/config
 
 You should see that all the webapps are using HTTP/2 Protocol in Chrome and Firefox.  And you
-should see that the default web app in non-HTTP mode is running in HTTP/1.1 Protocol in Firefox.
+should see that the default web app in non-HTTP mode is running in HTTP/1.1 Protocol in Firefox ad Chrome.
