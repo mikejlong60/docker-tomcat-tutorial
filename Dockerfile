@@ -1,7 +1,11 @@
 FROM tomcat:9.0.84-jdk21-corretto
-LABEL maintainer="deepak@softwareyoga.com"
+LABEL maintainer="michael.long@greymatter.io"
 
-ADD sample.war /usr/local/tomcat/webapps/
+RUN mkdir /usr/local/tomcat/certs
+COPY certs/*.pem /usr/local/tomcat/certs
+COPY server.xml /usr/local/tomcat/conf/server.xml
 
-EXPOSE 8080
+COPY webapps/* /usr/local/tomcat/webapps
+
+EXPOSE 8080 8445
 CMD ["catalina.sh", "run"]
